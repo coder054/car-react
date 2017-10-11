@@ -1,106 +1,268 @@
 body {
+  font-family: 'Roboto', sans-serif !important;
+  font-size: 15px!important;
+  line-height: 1.5!important;
+  ;
   margin: 0;
   padding: 0;
   font-family: sans-serif;
- 
 }
 
-select{
+table, td, tr{
+   font-family: 'Roboto', sans-serif !important;
+}
+
+select {
   display: inline-block;
   width: 200px;
 }
 
-th{
+th {
   text-align: center!important;
 }
 
-.title{
+.title {
   font-weight: bold;
   font-size: 25px;
   text-transform: uppercase;
   padding: 30px;
 }
 
-div > span{
+div.chooseCountryPort span {
   display: inline-block;
   font-weight: bold!important;
   color: #006699;
-  width: 150px
-}
-
-
-.priceColumn{
-  width: 224.4px;
-}
-
-.priceLoading{
-  width: 17px
-}
-
-.chooseCountryPort > div{
-  margin-bottom: 30px;
-}
-
-.loadingcars{
-  
-  padding: 10px;
-  
-  position: absolute;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%)
-}
-
-tbody{
-  position: relative;
-}
-
-
-.chooseCountryPort form{
-  margin-top: 5px;
-}
-
-
-@-webkit-keyframes example {
-    from {opacity: 0;}
-    to {opacity: 1}
-}
-
-
-@keyframes example {
-    from {opacity: 0;}
-    to {opacity: 1}
-}
-
-
-.selectPort{
-  opacity: 1;
-  -webkit-animation-name: example;
-          animation-name: example;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  width: 170px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .addCarWrapper{
+  margin-bottom: 90px;
+}
+
+.addCarWrapper a{
+  position: absolute;
+  right: 0;
+}
+
+
+
+.seachinput {
+  display: inline-block!important;
+  width: 89%!important;
+  margin-right: 1%;
+}
+
+.btn.btn-primary{
+  display: inline-block;
+  width: 10%;
+}
+
+select, option{
+  outline: none!important;
+}
+
+
+
+.priceColumn {
+  width: 224.4px;
+}
+
+.priceLoading {
+  width: 17px
+}
+
+.chooseCountryPort > div {
+  margin-bottom: 30px;
+}
+
+.loadingcars {
+  padding: 10px;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%)
+}
+
+tbody {
   position: relative;
 }
 
-.addCarWrapper .btn-info{
+.chooseCountryPort form {
+  margin-top: 5px;
+}
+
+@-webkit-keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes example {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1
+  }
+}
+
+.selectPort {
+  opacity: 1;
+  -webkit-animation-name: example;
+  animation-name: example;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+
+.addCarWrapper {
+  position: relative;
+}
+
+.addCarWrapper .btn-info {
   position: absolute;
   right: 0;
   top: -50px;
 }
 
+.glyphicon-triangle-bottom, .glyphicon-triangle-top {
+  cursor: pointer
+}
+
+@media only screen and (max-width: 770px) {
+  
+  .seachinput {
+  
+  width: 72%!important;
+  margin-right: 3%;
+}
+
+.btn.btn-primary{
+  
+  width: 25%;
+}
+}
 
 
 
+.carInfoLoading {
+  width: 22px;
+}
+
+.carinfo {
+  font-size: 18px;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.cardetail.container {
+  position: relative;
+}
+
+.backtoIndex, .delete, .edit {
+  position: absolute;
+  top: 30px;
+  width: 80px;
+}
+
+.backtoIndex {
+  right: 15px;
+}
+
+.delete {
+  right: 105px;
+}
+
+.edit {
+  right: 195px;
+}
+
+.editinfo {
+  position: absolute;
+  right: 15px;
+  cursor: pointer;
+  color: #006699;
+  display: none;
+}
+
+.carinfo:hover .editinfo {
+  display: block;
+}
+
+.editinfo:hover {
+  text-decoration: underline;
+}
 
 
+/* .carinfo .editinfo{
+  display: none
+} */
 
 
+/* .carinfo:hover .editinfo{
+  display: block;
+} */
 
+span.labelCarProperty {
+  display: inline-block;
+  width: 300px;
+  color: #006699;
+}
 
+.savecar {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  width: 100px;
+  font-weight: bold;
+  bottom: -60px;
+}
 
+.CarDetailRoott .alert-success {
+  position: absolute;
+  width: 100vw!important;
+  text-align: center!important;
+  font-size: 22px;
+  -webkit-animation-name: saveCarSuccess;
+  animation-name: saveCarSuccess;
+  opacity: 0;
+  -webkit-animation-duration: 4s;
+  animation-duration: 4s;
+}
 
+@-webkit-keyframes saveCarSuccess {
+  0% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 
+@keyframes saveCarSuccess {
+  0% {
+    opacity: 0.1;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.carPropertyInput {
+  border: 1px solid #ccc;
+  padding: 2px 7px;
+  border-radius: 4px;
+}
