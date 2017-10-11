@@ -37,10 +37,11 @@ const CarInfoo = observer(
                             )
                     }
 
-                    <span className="labelCarProperty" > {label} </span> {
+                    <span className="labelCarProperty" > {label} </span> 
+                    {
                         CarDetailState.editing[property] ?
                             (
-                                <input className="carPropertyInput"
+                                <input className="form-control carpropinput"
                                     onChange={event => (CarDetailState.car[property] = event.target.value)}
                                     type="text" value={car[property]} />
                             ) : (

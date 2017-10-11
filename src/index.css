@@ -8,8 +8,8 @@ body {
   font-family: sans-serif;
 }
 
-table, td, tr{
-   font-family: 'Roboto', sans-serif !important;
+table, td, tr {
+  font-family: 'Roboto', sans-serif !important;
 }
 
 select {
@@ -37,16 +37,14 @@ div.chooseCountryPort span {
   font-size: 16px;
 }
 
-.addCarWrapper{
+.addCarWrapper {
   margin-bottom: 90px;
 }
 
-.addCarWrapper a{
+.addCarWrapper a {
   position: absolute;
   right: 0;
 }
-
-
 
 .seachinput {
   display: inline-block!important;
@@ -54,16 +52,14 @@ div.chooseCountryPort span {
   margin-right: 1%;
 }
 
-.btn.btn-primary{
+.btn.btn-primary {
   display: inline-block;
   width: 10%;
 }
 
-select, option{
+select, option {
   outline: none!important;
 }
-
-
 
 .priceColumn {
   width: 224.4px;
@@ -135,20 +131,14 @@ tbody {
 }
 
 @media only screen and (max-width: 770px) {
-  
   .seachinput {
-  
-  width: 72%!important;
-  margin-right: 3%;
+    width: 72%!important;
+    margin-right: 3%;
+  }
+  .btn.btn-primary {
+    width: 25%;
+  }
 }
-
-.btn.btn-primary{
-  
-  width: 25%;
-}
-}
-
-
 
 .carInfoLoading {
   width: 22px;
@@ -265,4 +255,9 @@ span.labelCarProperty {
   border: 1px solid #ccc;
   padding: 2px 7px;
   border-radius: 4px;
+}
+
+.carpropinput {
+  width: 300px!important;
+  display: inline-block!important;
 }
