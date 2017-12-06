@@ -10,6 +10,26 @@ import { Switch, Redirect } from "react-router";
 
 const CarInfoo = observer(
     class CarInfoo extends Component {
+        renderEdit = () => {
+
+            const { property, car, CarDetailState } = this.props;
+
+
+            // Don't show "Edit" with Volume property
+            if (property == "Volume") {
+                return null
+            } else {
+                return (
+                    <div onClick={() => {
+                        CarDetailState.saveCarSuccess = false;
+                        CarDetailState.editing[property] = true;
+                    }} className="editinfo">
+                        Edit
+                    </div>
+                )
+            }
+        }
+
         render = () => {
             const { property, label, car, CarDetailState } = this.props;
 
@@ -27,17 +47,10 @@ const CarInfoo = observer(
                                 }
                                     className="editinfo" >
                                     Cancel </div>
-                            ) : (
-                                <div onClick={() => {
-                                    CarDetailState.saveCarSuccess = false;
-                                    CarDetailState.editing[property] = true;
-                                }} className="editinfo">
-                                    Edit
-                                </div>
-                            )
+                            ) : this.renderEdit() // xxxx
                     }
 
-                    <span className="labelCarProperty" > {label} </span> 
+                    <span className="labelCarProperty" > {label} </span>
                     {
                         CarDetailState.editing[property] ?
                             (
@@ -84,9 +97,7 @@ const CarDetail = observer(
 
                     <div className="container cardetail" >
                         <div className="title" > Car Detail: </div>
-                        <Link to="/" className="backtoIndex btn btn-info" >
-                            Back
-                        </Link>
+
                         <button onClick={e => { deleteCar() }} className="delete btn btn-danger" >
                             Delete
                         </button>

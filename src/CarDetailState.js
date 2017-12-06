@@ -48,6 +48,10 @@ class CarDetailState {
   }
 
   saveCar = () => {
+    // re caculate Volume (volume cannot be edit, it change when user change with, height or length)
+    this.car.Volume = this.car.VehicleWidth * this.car.VehicleHeight * this.car.VehicleLength
+
+    // update car info in mongodb
     axios.patch(`${API_URL}/cars/${this.car._id}`, this.car)
       .then(resp => {
 
